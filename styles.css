@@ -1,0 +1,26 @@
+header,
+footer {
+  background-color: #202020;
+  color: white;
+}
+
+header a {
+  color: white;
+}
+
+.cta {
+  background-color: #bb0000;
+  color: white;
+}
+.reviews {
+  background-color: #e8e8e8;
+}
+.guitars {
+  background-color: #fbfbfb;
+}
+.cta-sale {
+  background-color: #127300;
+}
+footer {
+  text-align: center;
+}
