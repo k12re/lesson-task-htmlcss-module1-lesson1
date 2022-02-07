@@ -7,28 +7,42 @@
       name="description"
       content="Get real authentic, hand-crafted guitars from Guitar Kings"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link href="styles.css" rel="stylesheet" />
-
     <title>Guitar Kings - Home</title>
+    <script
+      src="https://kit.fontawesome.com/1330ccaa0c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <a href="../index.html">Guitar Kings</a>
+    <header class="header">
+      <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="current">Home</a></li>
           <li><a href="guitars.html">Guitars</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Authentic Handmade Guitars</h1>
-      <a href="guitars.html" class="cta">View Guitars</a>
-
-      <section>
-        <h2>Our Guitars Are</h2>
+      <section class="welcome">
+        <div class="welcome_content">
+          <h1>Authentic Handmade Guitars</h1>
+          <a href="guitars.html" class="cta-header">View Guitars</a>
+        </div>
+      </section>
+      <section class="selling-points">
         <div>
+          <h2>Our Guitars Are</h2>
           <ul>
             <li>Made with real Pennsylvanian wood</li>
             <li>Crafted by a family-run business</li>
@@ -37,31 +51,46 @@
             <li>Options for all music lovers</li>
           </ul>
         </div>
-        <img src="images/home-info.jpg" alt="Hands strumming guitar" />
+        <div>
+          <img
+            class="selling-points_images"
+            src="images/home-info.jpg"
+            alt="Hands strumming guitar"
+          />
+        </div>
       </section>
 
       <section class="reviews">
         <h2>Reviews</h2>
-        <div>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse quis dictum elit. In hac habitasse platea dictumst" -Bob
-            Willis
-          </p>
-          <img
-            src="images/review-bio.jpg"
-            alt="Profile picture of Bob Willis"
-          />
-        </div>
-        <div>
-          <p>
-            "Maecenas interdum, erat nec pulvinar euismod, eros erat ornare
-            mauris, commodo vestibulum odio nuncid urna" -Sally Oldfield
-          </p>
-          <img
-            src="images/review-bio2.jpg"
-            alt="Profile picture of Sally Oldfield"
-          />
+        <div class="reviews_content">
+          <div>
+            <p class="reviews_text">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse quis dictum elit. In hac habitasse platea dictumst"
+              <span class="reviews_name">-Bob Willis </span>
+            </p>
+            <div>
+              <img
+                class="reviews_images"
+                src="images/review-bio.jpg"
+                alt="Profile picture of Bob Willis"
+              />
+            </div>
+          </div>
+          <div>
+            <p class="reviews_text">
+              "Maecenas interdum, erat nec pulvinar euismod, eros erat ornare
+              mauris, commodo vestibulum odio nuncid urna"
+              <span class="reviews_name">-Sally Oldfield</span>
+            </p>
+            <div>
+              <img
+                class="reviews_images"
+                src="images/review-bio2.jpg"
+                alt="Profile picture of Sally Oldfield"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

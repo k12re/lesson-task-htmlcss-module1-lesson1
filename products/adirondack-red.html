@@ -6,41 +6,63 @@
     <meta name="description" content="Adirondack Red from Guitar Kings" />
     <link href="../styles.css" rel="stylesheet" />
     <title>Guitar Kings - Adirondack Red</title>
+    <script
+      src="https://kit.fontawesome.com/1330ccaa0c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <a href="../index.html">Guitar Kings</a>
+    <header class="header">
+      <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../guitars.html">Guitars</a></li>
+          <li><a href="../guitars.html" class="current">Guitars</a></li>
           <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="product-specific">
       <section>
-        <img src="../images/product.jpg" alt="Adirondack Red" />
-        <div>
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Adrindack Red"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Adrindack Red"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Adrindack Red"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Adrindack Red"
-          />
+        <img
+          src="../images/product.jpg"
+          alt="Adirondack Red"
+          class="product-image"
+        />
+        <div class="product-image_thumbnails">
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adrindack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adrindack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adrindack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adrindack Red"
+              class="product-image"
+            />
+          </div>
         </div>
       </section>
-      <section>
+      <section class="product-specific_details">
         <h1>Adirondack Red</h1>
         <p>
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -50,8 +72,8 @@
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
           ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
         </p>
-        <p>$500</p>
-        <a href="../contact.html" class="cta">Contact Us</a>
+        <p class="product-specific_price">$500</p>
+        <a href="../contact.html" class="cta-2">Contact Us</a>
       </section>
     </main>
     <footer>Copyright &copy;</footer>

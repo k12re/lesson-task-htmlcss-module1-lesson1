@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Boots And Spurs";
+  src: url("/fonts/BootsAndSpurs.ttf") format("truetype");
+}
+
+body {
+  font-family: "Roboto", Tahoma, Verdana, sans-serif;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1,
+h2,
+.logo {
+  font-family: "Boots And Spurs", Tahoma, Verdana, sans-serif;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.product-list h2 {
+  font-family: "Roboto", Tahoma, Verdana, sans-serif;
+}
 header,
 footer {
   background-color: #202020;
@@ -6,15 +31,93 @@ footer {
 
 header a {
   color: white;
+  padding: 0px 10px;
+}
+
+.cta-header {
+  background-color: #bb0000;
+  color: white;
+  padding: 15px 80px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 1em;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .cta {
   background-color: #bb0000;
   color: white;
+  padding: 8px 30px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 50.466px;
+  text-align: center;
+  margin-top: 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
-.reviews {
-  background-color: #e8e8e8;
+
+.cta:before,
+.cta-header:before {
+  content: "";
+  padding: 16px;
+  background: white;
+  transform: rotate(45deg);
+  position: absolute;
+  height: 100px;
+  top: -40px;
+  left: -100px;
+  transition: left ease-in-out 0.5s;
+  opacity: 0.3;
 }
+
+.cta:hover:before,
+.cta-header:hover:before {
+  left: 110%;
+}
+
+.cta-2 {
+  background-color: #bb0000;
+  color: white;
+  padding: 15px 80px;
+  border-radius: 6px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.featured-guitars {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.featured-guitars img {
+  grid-column: -1/1;
+}
+
+.featured-guitars h2,
+.featured-guitars h3,
+.featured-guitars p {
+  grid-column: 1;
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.featured-guitars--sale {
+  display: flex;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
 .guitars {
   background-color: #fbfbfb;
 }
@@ -23,4 +126,377 @@ header a {
 }
 footer {
   text-align: center;
+  padding: 20px;
+}
+
+nav {
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  background: #202020;
+  z-index: 1000;
+  right: 0px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.current {
+  text-decoration-line: underline;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+/* Home page ---------------------------------------------------------------------------- */
+
+.welcome {
+  background-image: url("/images/home-header.jpg");
+  background-size: cover;
+  min-height: 70vh;
+  background-position-x: left;
+  background-position-y: bottom;
+  position: relative;
+  text-align: center;
+}
+
+.welcome_content {
+  position: absolute;
+  top: 100px;
+  left: 140px;
+}
+
+.selling-points,
+.reviews_content {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.selling-points > *,
+.reviews_content > * {
+  flex: 1;
+}
+
+.selling-points_images {
+  border-radius: 100px;
+  width: 100%;
+}
+
+.selling-points {
+  margin: 50px auto;
+}
+
+.reviews {
+  background-color: #e8e8e8;
+  text-align: center;
+  padding: 50px 0px;
+  max-width: 100%;
+}
+
+.reviews_content {
+  display: flex;
+  text-align: left;
+  margin: auto;
+}
+
+.reviews_content div {
+  margin: 30px;
+}
+
+.reviews_images {
+  border-radius: 50%;
+  max-height: 104px;
+  float: right;
+}
+
+.reviews_name {
+  display: block;
+}
+
+.guitars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1000px;
+  margin: auto;
+  grid-gap: 10px;
+}
+
+.guitars h2 {
+  grid-column: -1/1;
+}
+
+.guitars img {
+  width: 100%;
+}
+
+.products {
+  grid-area: 1;
+}
+
+/* Guitars page ---------------------------------------------------------------------------- */
+
+.guitars-overview {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 100%;
+  }
+
+  0% {
+    opacity: 0%;
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+}
+
+.guitars-overview {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.featured-guitars img {
+  width: 100%;
+}
+
+/* Adirondack Red page ---------------------------------------------------------------------------- */
+
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-specific_details {
+  padding: 0px 30px;
+}
+
+.product-specific_details h1 {
+  text-align: center;
+}
+
+.product-specific_details a {
+  display: block;
+  width: 95.44px;
+  margin: 50px auto;
+}
+
+.product-specific_price {
+  font-size: 1.5em;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image_thumbnails {
+  display: flex;
+}
+
+.product-image_thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Contact page ---------------------------------------------------------------------------- */
+
+input,
+select,
+textarea {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+}
+
+textarea {
+  height: 65%;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  text-align: left;
+}
+
+.form-wrapper > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile view ----------------------------------------------------------------- */
+
+@media only screen and (max-width: 340px) {
+  .main {
+    max-width: 100%;
+    position: center;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header li {
+    display: block;
+    padding: 10px 0px;
+  }
+
+  .welcome {
+    flex: 1;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome_content {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .selling-points {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .selling-points_images {
+    max-width: 100%;
+  }
+
+  .reviews_content {
+    flex-direction: column;
+  }
+
+  .guitars {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 10px;
+    max-width: 100%;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .product-specific {
+    flex-wrap: wrap;
+  }
+
+  .featured-guitars {
+    justify-content: center;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+  }
+
+  .form-wrapper textarea {
+    min-height: 100px;
+  }
+  .guitars-overview {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 341px) {
+  .guitars h2 {
+    width: 100%;
+  }
+
+  .guitars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: auto;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-specific {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    top: 0px;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  header label {
+    display: none;
+  }
+
+  .guitars-overview {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .guitars {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: auto;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .guitars-overview {
+    text-align: center;
+  }
 }

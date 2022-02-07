@@ -6,75 +6,88 @@
     <meta name="description" content="List of guitars from Guitar Kings" />
     <link href="styles.css" rel="stylesheet" />
     <title>Guitar Kings - Guitars</title>
+    <script
+      src="https://kit.fontawesome.com/1330ccaa0c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <a href="index.html">Guitar Kings</a>
+    <header class="header">
+      <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="guitars.html">Guitars</a></li>
+          <li><a href="guitars.html" class="current">Guitars</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section>
-      <h2>Guitars</h2>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-      <div>
-        <img src="images/product.jpg" alt="Adirondack Red" />
-        <h3>Adirondack Red</h3>
-        <p>$500</p>
-        <a href="products/adirondack-red.html" class="cta">View</a>
-      </div>
-    </section>
+    <main class="guitars-overview">
+      <h1>Guitars</h1>
+      <section class="product-list">
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <div class="featured-guitars--sale">
+            <p class="old-price">$500</p>
+            <p>$400</p>
+          </div>
+          <a href="products/adirondack-red.html" class="cta cta-sale"
+            >On Sale</a
+          >
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+        <div class="featured-guitars">
+          <img src="images/product.jpg" alt="Adirondack Red" />
+          <h2>Adirondack Red</h2>
+          <p>$500</p>
+          <a href="products/adirondack-red.html" class="cta">View</a>
+        </div>
+      </section>
+    </main>
     <footer>Copyright &copy;</footer>
   </body>
 </html>
